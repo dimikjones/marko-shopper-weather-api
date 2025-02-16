@@ -4,7 +4,7 @@
  *
  * Uninstalling plugin code.
  *
- * @package     Plugin_Name/Uninstaller
+ * @package     Marko_Shopper_Weather_Api/Uninstaller
  * @version     1.0.0
  */
 

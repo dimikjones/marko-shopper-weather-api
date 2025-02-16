@@ -4,13 +4,13 @@
  *
  * @class       FrontAssets
  * @version     1.0.0
- * @package     Plugin_Name/Classes/
+ * @package     Marko_Shopper_Weather_Api/Classes/
  */
 
-namespace Plugin_Name\Front;
+namespace Marko_Shopper_Weather_Api\Front;
 
-use Plugin_Name\Assets as AssetsMain;
-use Plugin_Name\Utils;
+use Marko_Shopper_Weather_Api\Assets as AssetsMain;
+use Marko_Shopper_Weather_Api\Utils;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

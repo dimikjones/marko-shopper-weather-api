@@ -2,14 +2,14 @@
 /**
  * Main class.
  *
- * @package  Plugin_Name
+ * @package  Marko_Shopper_Weather_Api
  * @version  1.0.0
  */
 
-namespace Plugin_Name;
+namespace Marko_Shopper_Weather_Api;
 
-use Plugin_Name\Admin\Main as Admin;
-use Plugin_Name\Front\Main as Front;
+use Marko_Shopper_Weather_Api\Admin\Main as Admin;
+use Marko_Shopper_Weather_Api\Front\Main as Front;
 
 
 /**

@@ -4,10 +4,10 @@
  *
  * @class       Admin
  * @version     1.0.0
- * @package     Plugin_Name/Classes/
+ * @package     Marko_Shopper_Weather_Api/Classes/
  */
 
-namespace Plugin_Name\Admin;
+namespace Marko_Shopper_Weather_Api\Admin;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

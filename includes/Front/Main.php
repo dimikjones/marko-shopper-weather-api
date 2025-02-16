@@ -4,10 +4,10 @@
  *
  * @class       Front
  * @version     1.0.0
- * @package     Plugin_Name/Classes/
+ * @package     Marko_Shopper_Weather_Api/Classes/
  */
 
-namespace Plugin_Name\Front;
+namespace Marko_Shopper_Weather_Api\Front;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

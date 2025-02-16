@@ -16,7 +16,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Plugin_Name\\": "includes/"
+			"Marko_Shopper_Weather_Api\\": "includes/"
 		}
 	},
 	"config": {

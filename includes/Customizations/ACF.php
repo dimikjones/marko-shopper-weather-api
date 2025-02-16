@@ -2,11 +2,11 @@
 /**
  * ACF Hooks
  *
- * @package     Plugin_Name/Customizations
+ * @package     Marko_Shopper_Weather_Api/Customizations
  * @version     1.0.0
  */
 
-namespace Plugin_Name\Customizations;
+namespace Marko_Shopper_Weather_Api\Customizations;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

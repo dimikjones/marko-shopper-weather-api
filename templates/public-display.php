@@ -7,8 +7,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/templates
+ * @package    Marko_Shopper_Weather_Api
+ * @subpackage Marko_Shopper_Weather_Api/templates
  */
 
 ?>
