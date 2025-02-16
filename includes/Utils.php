@@ -78,4 +78,13 @@ final class Utils {
 	public static function ajax_url() {
 		return admin_url( 'admin-ajax.php', 'relative' );
 	}
+
+	/**
+	 * Check if it is local installation?
+	 *
+	 * @return boolean
+	 */
+	public static function is_local_setup() {
+		return in_array( getenv( 'REMOTE_ADDR' ), array( '127.0.0.1', '::1' ), true ) ? true : false;
+	}
 }

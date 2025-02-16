@@ -27,6 +27,8 @@ final class Main {
 
 		Assets::hooks();
 
+		Admin_Settings::hooks();
+
 		add_action( 'current_screen', array( __CLASS__, 'conditional_includes' ) );
 	}
 
