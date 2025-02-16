@@ -66,7 +66,7 @@ final class Utils {
 	 */
 	public static function template_path() {
 		// Allow 3rd party plugin filter template path from their plugin.
-		return apply_filters( 'plugin_name_template_path', 'plugin-name/' );
+		return apply_filters( 'marko_shopper_weather_api_template_path', 'marko-shopper-weather-api/' );
 	}
 
 

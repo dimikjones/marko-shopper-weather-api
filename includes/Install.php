@@ -26,6 +26,6 @@ final class Install {
 		// Perform install actions here.
 
 		// Trigger action.
-		do_action( 'plugin_name_installed', $sitewide );
+		do_action( 'marko_shopper_weather_api_installed', $sitewide );
 	}
 }

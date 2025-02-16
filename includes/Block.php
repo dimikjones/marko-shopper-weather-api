@@ -36,7 +36,7 @@ final class Block {
 	public static function register_blocks() {
 
 		// A register block for each existing block.
-		$blocks = apply_filters( 'plugin_name_gutenberg_blocks', array() );
+		$blocks = apply_filters( 'marko_shopper_weather_api_gutenberg_blocks', array() );
 
 		foreach ( $blocks as $key => $block ) {
 
@@ -71,7 +71,7 @@ final class Block {
 		$asset_block = include Utils::plugin_path() . '/assets/build/' . $block_path . 'index.asset.php';
 
 		wp_register_script(
-			'plugin-name-' . $block_name . '-blocks',
+			'marko-shopper-weather-api-' . $block_name . '-blocks',
 			Utils::plugin_url() . '/assets/build/' . $block_path . 'index.js',
 			$asset_block['dependencies'],
 			$asset_block['version'],
@@ -104,18 +104,18 @@ final class Block {
 		}
 
 		// Set editor styles.
-		$editor_style = 'plugin-name-' . $block_name . '-blocks';
+		$editor_style = 'marko-shopper-weather-api-' . $block_name . '-blocks';
 		if ( ! empty( $args['editor_style'] ) ) {
 			$editor_style = $args['editor_style'];
 		}
 
 		register_block_type(
-			'plugin-name/' . $block_name,
+			'marko-shopper-weather-api/' . $block_name,
 			array(
 				'style'         => $styles,
 				'script'        => $script,
 				'editor_style'  => $editor_style,
-				'editor_script' => 'plugin-name-' . $block_name . '-blocks',
+				'editor_script' => 'marko-shopper-weather-api-' . $block_name . '-blocks',
 			)
 		);
 	}

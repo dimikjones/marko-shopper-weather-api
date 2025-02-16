@@ -39,7 +39,7 @@ final class Main {
 		add_action( 'init', array( __CLASS__, 'init' ) );
 
 		// Perform other actions when plugin is loaded.
-		do_action( 'plugin_name_loaded' );
+		do_action( 'marko_shopper_weather_api_loaded' );
 	}
 
 
@@ -49,7 +49,7 @@ final class Main {
 	 * @since 1.0.0
 	 */
 	public function __clone() {
-		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'plugin-name' ), '1.0.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'marko-shopper-weather-api' ), '1.0.0' );
 	}
 
 
@@ -59,7 +59,7 @@ final class Main {
 	 * @since 1.0.0
 	 */
 	public function __wakeup() {
-		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'plugin-name' ), '1.0.0' );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'marko-shopper-weather-api' ), '1.0.0' );
 	}
 
 
@@ -91,7 +91,7 @@ final class Main {
 		self::load_plugin_textdomain();
 
 		// Init action.
-		do_action( 'plugin_name_loaded' );
+		do_action( 'marko_shopper_weather_api_loaded' );
 	}
 
 
@@ -103,12 +103,12 @@ final class Main {
 	public static function init() {
 
 		// Before init action.
-		do_action( 'before_plugin_name_init' );
+		do_action( 'before_marko_shopper_weather_api_init' );
 
 		// Add needed hooks here.
 
 		// After init action.
-		do_action( 'plugin_name_init' );
+		do_action( 'marko_shopper_weather_api_init' );
 	}
 
 
@@ -124,17 +124,17 @@ final class Main {
 
 		if ( ! version_compare( PHP_VERSION, self::PLUGIN_REQUIREMENTS['php_version'], '>=' ) ) {
 			/* Translators: The minimum PHP version */
-			$errors[] = sprintf( esc_html__( 'WordPress Plugin Boilerplate requires a minimum PHP version of %s.', 'plugin-name' ), self::PLUGIN_REQUIREMENTS['php_version'] );
+			$errors[] = sprintf( esc_html__( 'Marko Shopper Weather Api requires a minimum PHP version of %s.', 'marko-shopper-weather-api' ), self::PLUGIN_REQUIREMENTS['php_version'] );
 		}
 
 		if ( ! version_compare( $wp_version, self::PLUGIN_REQUIREMENTS['wp_version'], '>=' ) ) {
 			/* Translators: The minimum WP version */
-			$errors[] = sprintf( esc_html__( 'WordPress Plugin Boilerplate requires a minimum WordPress version of %s.', 'plugin-name' ), self::PLUGIN_REQUIREMENTS['wp_version'] );
+			$errors[] = sprintf( esc_html__( 'Marko Shopper Weather Api requires a minimum WordPress version of %s.', 'marko-shopper-weather-api' ), self::PLUGIN_REQUIREMENTS['wp_version'] );
 		}
 
 		if ( isset( self::PLUGIN_REQUIREMENTS['wc_version'] ) && ( ! defined( 'WC_VERSION' ) || ! version_compare( WC_VERSION, self::PLUGIN_REQUIREMENTS['wc_version'], '>=' ) ) ) {
 			/* Translators: The minimum WC version */
-			$errors[] = sprintf( esc_html__( 'WordPress Plugin Boilerplate requires a minimum WooCommerce version of %s.', 'plugin-name' ), self::PLUGIN_REQUIREMENTS['wc_version'] );
+			$errors[] = sprintf( esc_html__( 'Marko Shopper Weather Api requires a minimum WooCommerce version of %s.', 'marko-shopper-weather-api' ), self::PLUGIN_REQUIREMENTS['wc_version'] );
 		}
 
 		if ( empty( $errors ) ) {
@@ -171,16 +171,16 @@ final class Main {
 	 * Note: the first-loaded translation file overrides any following ones if the same translation is present.
 	 *
 	 * Locales found in:
-	 *      - WP_LANG_DIR/plugin-name/plugin-name-LOCALE.mo
-	 *      - WP_LANG_DIR/plugins/plugin-name-LOCALE.mo
+	 *      - WP_LANG_DIR/marko-shopper-weather-api/marko-shopper-weather-api-LOCALE.mo
+	 *      - WP_LANG_DIR/plugins/marko-shopper-weather-api-LOCALE.mo
 	 */
 	private static function load_plugin_textdomain() {
 
 		// Add plugin's locale.
-		$locale = apply_filters( 'plugin_locale', get_locale(), 'plugin-name' );
+		$locale = apply_filters( 'plugin_locale', get_locale(), 'marko-shopper-weather-api' );
 
-		load_textdomain( 'plugin-name', WP_LANG_DIR . '/plugin-name/plugin-name-' . $locale . '.mo' );
+		load_textdomain( 'marko-shopper-weather-api', WP_LANG_DIR . '/marko-shopper-weather-api/marko-shopper-weather-api-' . $locale . '.mo' );
 
-		load_plugin_textdomain( 'plugin-name', false, plugin_basename( dirname( __FILE__ ) ) . '/i18n/languages' );
+		load_plugin_textdomain( 'marko-shopper-weather-api', false, plugin_basename( dirname( __FILE__ ) ) . '/i18n/languages' );
 	}
 }
