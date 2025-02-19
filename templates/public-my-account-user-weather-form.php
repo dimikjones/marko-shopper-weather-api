@@ -2,7 +2,7 @@
 /**
  * Provide a public-facing view for the plugin
  *
- * This file is used to markup the public-facing aspects of the plugin.
+ * This file is used for options form on the WooCommerce my-account/weather page.
  *
  * @link       http://example.com
  * @since      1.0.0
@@ -49,13 +49,13 @@ $user_weather_options_to_display = get_user_meta( $user_id, 'marko_swa_user_weat
 
 				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 					<label>
-						<input type="radio" <?php echo ! empty( $user_weather_temperature_scale ) && 'celsius' === $user_weather_temperature_scale ? esc_attr( 'checked' ) : ''; ?> name="user_weather_temperature_scale" value="<?php echo esc_attr( 'celsius' ); ?>">
+						<input type="radio" <?php echo ! empty( $user_weather_temperature_scale ) && 'c' === $user_weather_temperature_scale ? esc_attr( 'checked' ) : ''; ?> name="user_weather_temperature_scale" value="<?php echo esc_attr( 'c' ); ?>">
 						<?php esc_html_e( 'Celsius', 'marko-shopper-weather-api' ); ?>
 					</label>
 				</p>
 				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 					<label>
-						<input type="radio" <?php echo ! empty( $user_weather_temperature_scale ) && 'fahrenheit' === $user_weather_temperature_scale ? esc_attr( 'checked' ) : ''; ?> name="user_weather_temperature_scale" value="<?php echo esc_attr( 'fahrenheit' ); ?>">
+						<input type="radio" <?php echo ! empty( $user_weather_temperature_scale ) && 'f' === $user_weather_temperature_scale ? esc_attr( 'checked' ) : ''; ?> name="user_weather_temperature_scale" value="<?php echo esc_attr( 'f' ); ?>">
 						<?php esc_html_e( 'Fahrenheit', 'marko-shopper-weather-api' ); ?>
 					</label>
 				</p>

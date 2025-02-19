@@ -10,6 +10,7 @@ namespace Marko_Shopper_Weather_Api;
 
 use Marko_Shopper_Weather_Api\Admin\Main as Admin;
 use Marko_Shopper_Weather_Api\Front\Main as Front;
+use Marko_Shopper_Weather_Api\Common\Main as Common;
 
 
 /**
@@ -80,6 +81,7 @@ final class Main {
 
 		if ( Utils::is_request( 'frontend' ) ) {
 			Front::hooks();
+			Common::hooks();
 		}
 
 		// Common includes.

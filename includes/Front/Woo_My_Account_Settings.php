@@ -10,6 +10,7 @@
 namespace Marko_Shopper_Weather_Api\Front;
 
 use Marko_Shopper_Weather_Api\Template;
+use Marko_Shopper_Weather_Api\Common;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -59,8 +60,7 @@ final class Woo_My_Account_Settings {
 		printf( '<h3>%s</h3>', esc_html__( 'User Specific Weather', 'marko-shopper-weather-api' ) );
 		Template::get_part( 'public', 'my-account-user-weather-form' );
 
-		// TODO: Api module integration.
-		echo 'test';
+		Common\Api::include_weather_template();
 	}
 
 	// Flush permalinks once on plugin activation.
@@ -99,9 +99,9 @@ final class Woo_My_Account_Settings {
 			return;
 		}
 
-		$recipient_name = ! empty( $_POST['user_weather_location'] ) ? sanitize_text_field( wp_unslash( $_POST['user_weather_location'] ) ) : '';
-		$pizza_size     = ! empty( $_POST['user_weather_temperature_scale'] ) ? sanitize_text_field( wp_unslash( $_POST['user_weather_temperature_scale'] ) ) : '';
-		$pizza_topping  = ! empty( $_POST['user_weather_options_to_display'] ) ? map_deep( wp_unslash( $_POST['user_weather_options_to_display'] ), 'sanitize_text_field' ) : array();
+		$user_weather_location           = ! empty( $_POST['user_weather_location'] ) ? sanitize_text_field( wp_unslash( $_POST['user_weather_location'] ) ) : '';
+		$user_weather_temperature_scale  = ! empty( $_POST['user_weather_temperature_scale'] ) ? sanitize_text_field( wp_unslash( $_POST['user_weather_temperature_scale'] ) ) : '';
+		$user_weather_options_to_display = ! empty( $_POST['user_weather_options_to_display'] ) ? map_deep( wp_unslash( $_POST['user_weather_options_to_display'] ), 'sanitize_text_field' ) : array();
 
 		wc_nocache_headers();
 
@@ -112,8 +112,8 @@ final class Woo_My_Account_Settings {
 		}
 
 		// Update user meta value.
-		update_user_meta( $user_id, 'marko_swa_user_weather_location', $recipient_name );
-		update_user_meta( $user_id, 'marko_swa_user_weather_temperature_scale', $pizza_size );
-		update_user_meta( $user_id, 'marko_swa_user_weather_options_to_display', $pizza_topping );
+		update_user_meta( $user_id, 'marko_swa_user_weather_location', $user_weather_location );
+		update_user_meta( $user_id, 'marko_swa_user_weather_temperature_scale', $user_weather_temperature_scale );
+		update_user_meta( $user_id, 'marko_swa_user_weather_options_to_display', $user_weather_options_to_display );
 	}
 }

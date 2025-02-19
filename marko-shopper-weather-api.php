@@ -14,7 +14,7 @@
  * @wordpress-plugin
  * Plugin Name: Marko Shopper Weather Api
  * Plugin URI:
- * Description: Display weather information for current user from weather API according to user preferences in WooCommerce my-account/user-posts/ page.
+ * Description: Display weather information for current user from weather API according to user preferences in WooCommerce my-account/user-weather/ page.
  * Version:     1.0.0
  * Author:      Marko Dimitrijević
  * Author URI:  https://www.linkedin.com/in/diwebdeveloper/
