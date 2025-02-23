@@ -8,28 +8,56 @@
 // scss variables
 $transition-timing: .2s ease-out;
 
-@mixin mswaWooMyAccountUserPreferences() {
-	border: 2px solid var(--mswa-main-color);
+@mixin mswaUserWeatherPreferences() {
+	background: linear-gradient(45deg, rgba(51, 96, 117, 1) 0%, rgba(11, 20, 31, 1) 100%);
+	border-radius: 20px;
+	overflow: hidden;
+	padding: 25px;
 
-	.marko-swa-heading {
-		background-color: var(--mswa-main-color);
+	* {
 		color: var(--mswa-white-color);
-		font-weight: 500;
-		padding: 10px;
 	}
 
-	> p {
-		margin-bottom: 5px;
-		padding: 0 10px;
+	.marko-swa-heading {
+		font-weight: 500;
+	}
 
-		&:last-of-type {
-			margin-bottom: 15px;
+	p,
+	.marko-swa-city {
+		margin: 0;
+	}
+
+	.marko-swa-main {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin: 14px 0 22px 0;
+
+		.marko-swa-current-temp {
+			font-size: 2.617924em;
+			font-weight: 500;
 		}
 
-		strong {
+		.marko-swa-weather-icon {
+			margin-right: 10px;
+		}
 
-			&:after {
-				content: ":";
+		.marko-swa-text {
+			width: 100%;
+			font-weight: 500;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+		}
+	}
+
+	.marko-swa-symbol {
+		text-transform: uppercase;
+		margin-left: 5px;
+
+		&.scale {
+
+			&:before {
+				content: "°";
 			}
 		}
 	}

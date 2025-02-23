@@ -61,13 +61,9 @@
 }
 
 // my-account/user-posts/ and API Widget styles
-.woocommerce-account,
-.widget-area {
+.marko-swa-public {
 
-	.marko-swa-public {
-
-		&.user-preferences {
-			@include mswaWooMyAccountUserPreferences();
-		}
+	&.user-weather-preferences {
+		@include mswaUserWeatherPreferences();
 	}
 }

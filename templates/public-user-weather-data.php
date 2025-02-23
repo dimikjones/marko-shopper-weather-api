@@ -37,18 +37,20 @@ $weather_humidity = $response['current']['humidity'];
 	<?php endif; ?>
 
 	<div class="marko-swa-conditions">
-		<img src="<?php echo esc_url( $weather_icon ); ?>" alt="<?php echo esc_html( $weather_text ); ?>" title="<?php echo esc_html( $weather_text ); ?>">
-		<span class="marko-swa-text"><?php echo esc_html( $weather_text ); ?></span>
-		<span class="marko-swa-current-temp"><?php echo esc_html( $weather_temp ); ?><span class="marko-swa-scale-symbol"><?php echo esc_html( $temperature_scale ); ?></span></span>
+		<div class="marko-swa-main">
+			<img class="marko-swa-weather-icon" src="<?php echo esc_url( $weather_icon ); ?>" alt="<?php echo esc_html( $weather_text ); ?>" title="<?php echo esc_html( $weather_text ); ?>">
+			<span class="marko-swa-current-temp"><?php echo esc_html( $weather_temp ); ?><span class="marko-swa-symbol scale"><?php echo esc_html( $temperature_scale ); ?></span></span>
+			<span class="marko-swa-text"><?php echo esc_html( $weather_text ); ?></span>
+		</div>
 
 		<?php if ( isset( $display_feelslike ) && $display_feelslike ) : ?>
-			<p class="marko-swa-feelslike"><?php esc_html_e( 'Feels like: ', 'marko-shopper-weather-api' ); ?><?php echo esc_html( $weather_feel ); ?><span class="marko-swa-scale-symbol"><?php echo esc_html( $temperature_scale ); ?></span></p>
+			<p class="marko-swa-info feelslike"><?php esc_html_e( 'Feels like: ', 'marko-shopper-weather-api' ); ?><?php echo esc_html( $weather_feel ); ?><span class="marko-swa-symbol scale"><?php echo esc_html( $temperature_scale ); ?></span></p>
 		<?php endif; ?>
 		<?php if ( isset( $display_pressure ) && $display_pressure ) : ?>
-			<p class="marko-swa-preasure"><?php esc_html_e( 'Pressure: ', 'marko-shopper-weather-api' ); ?><?php echo esc_html( $weather_pressure ); ?><span class="marko-swa-preasure-symbol"><?php esc_html_e( 'mb', 'marko-shopper-weather-api' ); ?></span></p>
+			<p class="marko-swa-info preasure"><?php esc_html_e( 'Pressure: ', 'marko-shopper-weather-api' ); ?><?php echo esc_html( $weather_pressure ); ?><span class="marko-swa-symbol preasure"><?php esc_html_e( 'mb', 'marko-shopper-weather-api' ); ?></span></p>
 		<?php endif; ?>
 		<?php if ( isset( $display_humidity ) && $display_humidity ) : ?>
-			<p class="marko-swa-humidity"><?php esc_html_e( 'Humidity: ', 'marko-shopper-weather-api' ); ?><?php echo esc_html( $weather_humidity ); ?><span class="marko-swa-humidity-symbol"><?php esc_html_e( '%', 'marko-shopper-weather-api' ); ?></span></p>
+			<p class="marko-swa-info humidity"><?php esc_html_e( 'Humidity: ', 'marko-shopper-weather-api' ); ?><?php echo esc_html( $weather_humidity ); ?><span class="marko-swa-symbol humidity"><?php esc_html_e( '%', 'marko-shopper-weather-api' ); ?></span></p>
 		<?php endif; ?>
 	</div>
 </div>
