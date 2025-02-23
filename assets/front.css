@@ -1,8 +1,78 @@
-/*!**************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./assets/source/sass/front/marko-shopper-weather-api.scss ***!
-  \**************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./assets/source/sass/front/shopper-weather-api.scss ***!
+  \********************************************************************************************************************************************/
 /**
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+/* Include variables and mixins */
+:root {
+  --mswa-main-color: #7f54b3;
+  --mswa-white-color: #fff; }
+
+.marko-swa-admin-options-block input[type=text],
+.marko-swa-admin-options-block input[type=number],
+.marko-swa-admin-options-block input[type=email],
+.marko-swa-admin-options-block input[type=tel],
+.marko-swa-admin-options-block input[type=url],
+.marko-swa-admin-options-block input[type=password],
+.marko-swa-admin-options-block input[type=search],
+.marko-swa-admin-options-block textarea,
+.marko-swa-admin-options-block .input-text {
+  border: 2px solid transparent;
+  border-bottom-color: var(--mswa-main-color);
+  transition: border-color 0.2s ease-out, outline-color 0.2s ease-out;
+  outline: none; }
+  .marko-swa-admin-options-block input[type=text]:focus,
+  .marko-swa-admin-options-block input[type=number]:focus,
+  .marko-swa-admin-options-block input[type=email]:focus,
+  .marko-swa-admin-options-block input[type=tel]:focus,
+  .marko-swa-admin-options-block input[type=url]:focus,
+  .marko-swa-admin-options-block input[type=password]:focus,
+  .marko-swa-admin-options-block input[type=search]:focus,
+  .marko-swa-admin-options-block textarea:focus,
+  .marko-swa-admin-options-block .input-text:focus {
+    outline: none;
+    border-color: var(--mswa-main-color); }
+
+.marko-swa-admin-options-block label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer; }
+
+.marko-swa-admin-options-block input[type="checkbox"],
+.marko-swa-admin-options-block input[type="radio"] {
+  width: auto;
+  cursor: pointer;
+  margin-right: 5px; }
+
+.marko-swa-admin-options-block fieldset {
+  border: 2px solid var(--mswa-main-color); }
+  .marko-swa-admin-options-block fieldset legend {
+    color: var(--mswa-white-color);
+    background: var(--mswa-main-color); }
+  .marko-swa-admin-options-block fieldset > p {
+    margin-bottom: 5px; }
+    .marko-swa-admin-options-block fieldset > p:last-of-type {
+      margin-bottom: 0; }
+
+.woocommerce-account .marko-swa-public.user-preferences,
+.widget-area .marko-swa-public.user-preferences {
+  border: 2px solid var(--mswa-main-color); }
+  .woocommerce-account .marko-swa-public.user-preferences .marko-swa-heading,
+  .widget-area .marko-swa-public.user-preferences .marko-swa-heading {
+    background-color: var(--mswa-main-color);
+    color: var(--mswa-white-color);
+    font-weight: 500;
+    padding: 10px; }
+  .woocommerce-account .marko-swa-public.user-preferences > p,
+  .widget-area .marko-swa-public.user-preferences > p {
+    margin-bottom: 5px;
+    padding: 0 10px; }
+    .woocommerce-account .marko-swa-public.user-preferences > p:last-of-type,
+    .widget-area .marko-swa-public.user-preferences > p:last-of-type {
+      margin-bottom: 15px; }
+    .woocommerce-account .marko-swa-public.user-preferences > p strong:after,
+    .widget-area .marko-swa-public.user-preferences > p strong:after {
+      content: ":"; }
 

@@ -2,3 +2,26 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
+
+/* Include variables and mixins */
+@import '../variables-mixins';
+
+.marko-shopper-weather-api-admin-form {
+
+	.marko-shopper-weather-api-row {
+		border-width: 2px;
+		border-style: solid;
+
+		th {
+			padding: 20px 10px 20px;
+		}
+
+		select {
+			min-width: 200px;
+		}
+
+		.description {
+			font-style: italic;
+		}
+	}
+}

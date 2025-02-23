@@ -1,8 +1,22 @@
-/*!********************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./assets/source/sass/admin/marko-shopper-weather-api-admin.scss ***!
-  \********************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./assets/source/sass/admin/shopper-weather-api-admin.scss ***!
+  \**************************************************************************************************************************************************/
 /**
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
+/* Include variables and mixins */
+:root {
+  --mswa-main-color: #7f54b3;
+  --mswa-white-color: #fff; }
+
+.marko-shopper-weather-api-admin-form .marko-shopper-weather-api-row {
+  border-width: 2px;
+  border-style: solid; }
+  .marko-shopper-weather-api-admin-form .marko-shopper-weather-api-row th {
+    padding: 20px 10px 20px; }
+  .marko-shopper-weather-api-admin-form .marko-shopper-weather-api-row select {
+    min-width: 200px; }
+  .marko-shopper-weather-api-admin-form .marko-shopper-weather-api-row .description {
+    font-style: italic; }
 
