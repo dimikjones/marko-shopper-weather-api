@@ -42,7 +42,7 @@ final class Assets {
 	public static function add_styles( $styles ) {
 
 		$styles['marko-shopper-weather-api-general'] = array(
-			'src' => AssetsMain::localize_asset( 'css/front/marko-shopper-weather-api.css' ),
+			'src' => AssetsMain::localize_asset( 'front.css' ),
 		);
 
 		return $styles;
@@ -58,7 +58,7 @@ final class Assets {
 	public static function add_scripts( $scripts ) {
 
 		$scripts['marko-shopper-weather-api-general'] = array(
-			'src'  => AssetsMain::localize_asset( 'js/front/marko-shopper-weather-api.js' ),
+			'src'  => AssetsMain::localize_asset( 'front.js' ),
 			'data' => array(
 				'ajax_url' => Utils::ajax_url(),
 			),
